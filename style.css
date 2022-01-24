@@ -244,6 +244,68 @@ body{
   font-size: 30px;
 }
 
+input, select, textarea{
+  border: 5px solid #FFC900;
+  border-radius: 5px;
+  outline: none !important;
+}
+input::placeholder, textarea::placeholder{
+  font-family: Gotham;
+  font-size: 24px;
+  color: #6C6C6C;
+  letter-spacing: 4.5%;
+}
+
+
+label {
+  display:block;
+  color: #474747;
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+
+#contact-text{
+  font-family: Gotham;
+  font-weight: bold;
+  letter-spacing: -5%;
+  font-size: 45px;
+  margin-left: -150px;
+}
+
+#mail{
+  width: 350px;
+  height: 35px;
+  font-size: 18px;
+}
+#country{
+  width: 150px;
+  margin: 0;
+  height: 48px;
+  font-size: 28px;
+  font-weight: bold;
+}
+#text{
+  width: 100%;
+  height: 250px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+#footer{
+  background-color: var(--blue);
+  width: 100%;
+  height: 500px;
+}
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 600px) {
   .row{
     flex-direction: column;
@@ -266,6 +328,10 @@ body{
   }
 
   .engagements-icon img{
+    max-width: 150px;
+  }
+
+  #polyvalent{
     max-width: 200px;
   }
 
@@ -275,7 +341,8 @@ body{
     width: max-content;
   }
   .engagements-name{
-    font-size: 35px;
+    font-size: 33px;
+
   }
   .engagements-text{
     font-size: 26px
@@ -312,7 +379,7 @@ body{
   #hero-title2{
     font-size: 25px;
     line-height: 32px;
-    text-align: left;
+    text-align: center;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -324,5 +391,43 @@ body{
   .services-text{
     font-size: 25px;
     line-height: 30px;
+  }
+}
+
+@media only screen  and (min-width : 1224px) {
+  #hero{
+    margin-top: 0;
+  }
+  #services-question{
+    font-size: 36px;
+    margin-bottom: 5px;
+  }
+  .services-text{
+    font-size: 32px;
+  }
+  .category-content{
+    max-width: 800px;
+  }
+  .engagements-icon img{
+    max-width: 150px;
+  }
+  #polyvalent{
+    max-width: 200px;
+  }
+  .engagements-name{
+    font-size: 32px;
+    font-weight: 700;
+  }
+  .engagements-text{
+    font-size: 28px;
+    font-weight: 500;
+  }
+  #engagements{
+    min-width: 1050px !important;
+  }
+  .engagements-col{
+    max-width: 320px;
+    margin-top: 0;
+    text-align: left;
   }
 }
