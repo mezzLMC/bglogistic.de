@@ -101,14 +101,23 @@ body{
   width: 60%;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
 }
+
 .contacts{
   font-family: "Inter", serif;
   font-weight: 600;
   font-size: 25px;
   line-height: 30px;
   color: #4E4E4E;
+}
+.contacts a{
+  text-decoration: none;
+  color: inherit;
+}
+.contacts a:hover{
+  text-decoration: underline;
 }
 .contacts::before{
   content: "";
@@ -168,7 +177,7 @@ body{
 .category::after{
   display: block;
   content: '';
-  width: 320px;
+  width: auto;
   height: 13px;
   margin: auto;
   background: url("./assets/underline.svg") no-repeat center;
@@ -180,10 +189,13 @@ body{
   color: #595A5B;
   font-family: Gotham, serif;
   font-style: normal;
-  margin-top: 50px;
+  margin-top: 100px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+}
+#services:nth-child(1){
+  margin-top: 50px
 }
 #services p:nth-child(4){
   margin-top: -15px;
@@ -248,9 +260,10 @@ input, select, textarea{
   border: 5px solid #FFC900;
   border-radius: 5px;
   outline: none !important;
+  box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.07), 0px 15.5556px 46.8519px rgba(0, 0, 0, 0.0531481), 0px 9.24444px 25.4815px rgba(0, 0, 0, 0.0425185), 0px 4.8px 13px rgba(0, 0, 0, 0.035), 0px 1.95556px 6.51852px rgba(0, 0, 0, 0.0274815), 0px 0.444444px 3.14815px rgba(0, 0, 0, 0.0168519);
 }
 input::placeholder, textarea::placeholder{
-  font-family: Gotham;
+  font-family: Gotham, monospace;
   font-size: 24px;
   color: #6C6C6C;
   letter-spacing: 4.5%;
@@ -269,7 +282,7 @@ label {
   font-family: Gotham;
   font-weight: bold;
   letter-spacing: -5%;
-  font-size: 45px;
+  font-size: 29px;
   margin-left: -150px;
 }
 
@@ -290,16 +303,33 @@ label {
   height: 250px;
   padding: 10px;
   font-size: 18px;
+  resize: none;
+}
+
+#contact-submit{
+    border-radius: 8px;
+    background-color: var(--blue);
+    border: none;
+    height: 40px;
+    width: 150px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    margin-bottom: 50px;
+    color: white;
+    font-family: Gotham;
+    font-weight: bold;
+    font-size: 22px;
+    box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.07), 0px 15.5556px 46.8519px rgba(0, 0, 0, 0.0531481), 0px 9.24444px 25.4815px rgba(0, 0, 0, 0.0425185), 0px 4.8px 13px rgba(0, 0, 0, 0.035), 0px 1.95556px 6.51852px rgba(0, 0, 0, 0.0274815), 0px 0.444444px 3.14815px rgba(0, 0, 0, 0.0168519);
+
 }
 
 #footer{
   background-color: var(--blue);
   width: 100%;
-  height: 500px;
+  height: 400px;
 }
-
-
-
 
 
 
@@ -350,6 +380,7 @@ label {
 
   .category::after{
     width: auto;
+
   }
   .category{
     font-size: 45px;
@@ -392,21 +423,54 @@ label {
     font-size: 25px;
     line-height: 30px;
   }
+  #mail{
+    width:100%;
+    padding-left: 10px;
+  }
+  label{
+    margin-top: 25px;
+  }
+  #contact-text{
+    margin-left: 0;
+  }
+  #text{
+    font-size: 18px;
+    height: 200px;
+  }
+  #text::placeholder, #mail::placeholder{
+    font-size: 18px;
+  }
+  input, select, textarea{
+    border-width: 4px;
+  }
+  #country{
+    font-size: 20px;
+  }
 }
 
 @media only screen  and (min-width : 1224px) {
+  #header{
+    height: 65px;
+  }
+  .contacts{
+    font-size: 23px;
+  }
+  .category{
+    font-size: 40px;
+  }
   #hero{
     margin-top: 0;
   }
   #services-question{
-    font-size: 36px;
-    margin-bottom: 5px;
+    font-size: 26px;
+    margin-bottom: 0;
   }
   .services-text{
-    font-size: 32px;
+    font-size: 24px;
+    line-height: 28px;
   }
   .category-content{
-    max-width: 800px;
+    max-width: 700px;
   }
   .engagements-icon img{
     max-width: 150px;
@@ -415,19 +479,25 @@ label {
     max-width: 200px;
   }
   .engagements-name{
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 700;
   }
   .engagements-text{
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 500;
   }
   #engagements{
-    min-width: 1050px !important;
+    min-width: 950px !important;
   }
   .engagements-col{
-    max-width: 320px;
+    max-width: 280px;
     margin-top: 0;
     text-align: left;
+  }
+  .category::after{
+    width: 250px;
+  }
+  #contact{
+    max-width: 600px;
   }
 }
