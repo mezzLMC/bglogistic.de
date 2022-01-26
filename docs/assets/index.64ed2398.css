@@ -41,7 +41,7 @@ body {
 #animation-cover {
 	position: fixed;
 	z-index: 1000;
-	background: #fef7ec url("assets/Vector.44c3c146.svg") no-repeat center;
+	background: #fef7ec url("Vector.44c3c146.svg") no-repeat center;
 	background-size: cover;
 	left: 0;
 	width: 100%;
@@ -184,7 +184,7 @@ body {
 	width: auto;
 	height: 13px;
 	margin: auto;
-	background: url("assets/underline.5f077499.svg") no-repeat center;
+	background: url("underline.5f077499.svg") no-repeat center;
 	background-size: 100% 100%
 }
 
@@ -362,7 +362,7 @@ label {
 		width: 100%
 	}
 	#animation-cover {
-		background: #fef7ec url("assets/phone-cover.306f7b1c.svg") no-repeat center;
+		background: #fef7ec url("phone-cover.306f7b1c.svg") no-repeat center;
 		background-size: 100% 100%;
 		width: 100%
 	}
