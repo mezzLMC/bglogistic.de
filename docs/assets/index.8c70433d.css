@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Work+Sans:wght@500;700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Domine:wght@700&family=Inter:wght@600&family=Work+Sans:wght@500;700&display=swap);
-@import url(https://fonts.cdnfonts.com/css/gotham);
+@import url(http://fonts.cdnfonts.com/css/gotham);
 * {
 	--yellow: #F4C827;
 	--blue: #1A5F7A
@@ -265,7 +265,7 @@ body {
 
 .engagements-text {
 	font-family: Gotham, serif;
-	font-weight: 700;
+	font-weight: 500;
 	line-height: 115.7%;
 	margin-top: 10px!important;
 	font-size: 30px
@@ -369,11 +369,19 @@ label {
 	#center {
 		width: 80%
 	}
+	.engagements-icon {
+		height: auto;
+		margin-bottom: 15px!important
+	}
 	.engagements-icon img {
-		max-width: 150px
+		max-width: 120px;
+		position: static;
+		left: auto;
+		top: auto;
+		transform: none
 	}
 	#polyvalent {
-		max-width: 200px
+		max-width: 13 0
 	}
 	#engagements .category {
 		font-size: 40px;
@@ -381,10 +389,10 @@ label {
 		width: max-content
 	}
 	.engagements-name {
-		font-size: 33px
+		font-size: 28px
 	}
 	.engagements-text {
-		font-size: 26px
+		font-size: 25px
 	}
 	.category::after {
 		width: auto

@@ -250,7 +250,7 @@ body{
 }
 .engagements-text{
   font-family: Gotham, serif;
-  font-weight: bold;
+  font-weight: 500;
   line-height: 115.7%;
   margin-top: 10px !important;
   font-size: 30px;
@@ -357,12 +357,20 @@ label {
     width: 80%;
   }
 
+  .engagements-icon{
+    height: auto;
+    margin-bottom: 15px !important;
+  }
   .engagements-icon img{
-    max-width: 150px;
+    max-width: 120px;
+    position: static;
+    left: auto;
+    top: auto;
+    transform: none;
   }
 
   #polyvalent{
-    max-width: 200px;
+    max-width: 13 0px;
   }
 
   #engagements .category{
@@ -371,11 +379,11 @@ label {
     width: max-content;
   }
   .engagements-name{
-    font-size: 33px;
+    font-size: 28px;
 
   }
   .engagements-text{
-    font-size: 26px
+    font-size: 25px
   }
 
   .category::after{
