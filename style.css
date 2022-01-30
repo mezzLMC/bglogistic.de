@@ -216,7 +216,7 @@ body{
 }
 #engagements{
   margin-top: 100px;
-  max-width: 1000px !important;
+  max-width: 1000px
 }
 
 .engagements-icon{
@@ -370,9 +370,11 @@ label {
   }
 
   #polyvalent{
-    max-width: 13 0px;
+    max-width: 130px;
   }
-
+  #engagements{
+    max-width: 250px;
+  }
   #engagements .category{
     font-size: 40px;
     margin-left: -15px;
@@ -387,12 +389,14 @@ label {
   }
 
   .category::after{
-    width: auto;
+    width: 210px;
+    margin-top: 10px;
 
   }
   .category{
-    font-size: 45px;
+    font-size: 32px;
     margin-bottom: 0;
+    line-height: 100%;
   }
 
   #blg-logo{
@@ -495,7 +499,7 @@ label {
     font-weight: 500;
   }
   #engagements{
-    min-width: 950px !important;
+    min-width: 950px
   }
   .engagements-col{
     max-width: 280px;
