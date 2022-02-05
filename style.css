@@ -26,6 +26,7 @@ body{
   background: white;
   z-index: 10;
   width: 100%;
+  overflow-x: hidden;
 }
 #animation-title{
   position: absolute;
@@ -295,8 +296,8 @@ label {
   width: 150px;
   margin: 0;
   height: 48px;
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 25px;
+  font-weight: 600;
 }
 #text{
   width: 100%;
@@ -307,14 +308,13 @@ label {
 }
 
 #contact-submit{
+    display: block;
     border-radius: 8px;
     background-color: var(--blue);
     border: none;
     height: 40px;
     width: 150px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: auto;
     margin-top: 20px;
     margin-bottom: 50px;
     color: white;
@@ -322,7 +322,12 @@ label {
     font-weight: bold;
     font-size: 22px;
     box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.07), 0px 15.5556px 46.8519px rgba(0, 0, 0, 0.0531481), 0px 9.24444px 25.4815px rgba(0, 0, 0, 0.0425185), 0px 4.8px 13px rgba(0, 0, 0, 0.035), 0px 1.95556px 6.51852px rgba(0, 0, 0, 0.0274815), 0px 0.444444px 3.14815px rgba(0, 0, 0, 0.0168519);
-
+}
+#contact-submit:hover{
+    transform: scale(1.03);
+}
+#contact-submit:active{
+  transform: scale(0.97);
 }
 
 #footer{
@@ -340,7 +345,7 @@ label {
   .row{
     flex-direction: column;
   }
-  h1 {
+  h1 {  
     font-size: 35px;
   }
 
@@ -356,7 +361,35 @@ label {
   #center{
     width: 80%;
   }
+  #hero-title{
+    top: 8%;
+    width: auto;
+    left: 0;
+    right: 20px;
+    transform: none;
+  }
+  #hero-title1{
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
 
+  }
+  #hero-title2{
+    font-size: 25px;
+    line-height: 32px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #services-question{
+    font-size: 29px;
+    line-height: 37px;
+  }
+  .services-text{
+    font-size: 25px;
+    line-height: 30px;
+  }
   .engagements-icon{
     height: auto;
     margin-bottom: 15px !important;
@@ -368,7 +401,6 @@ label {
     top: auto;
     transform: none;
   }
-
   #polyvalent{
     max-width: 130px;
   }
@@ -406,57 +438,40 @@ label {
   #contact-bar{
     display: none;
   }
-  #hero-title{
-    top: 8%;
-    width: auto;
-    left: 0;
-    right: 20px;
-    transform: none;
+  #contact{
+    max-width: 650px !important;
   }
-  #hero-title1{
-    text-align: center;
-    padding-left: 10px;
-    padding-right: 10px;
-
-  }
-  #hero-title2{
-    font-size: 25px;
-    line-height: 32px;
-    text-align: center;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  #services-question{
-    font-size: 29px;
-    line-height: 37px;
-  }
-  .services-text{
-    font-size: 25px;
-    line-height: 30px;
+  #form{
+    width: 100%;
   }
   #mail{
     width:100%;
     padding-left: 10px;
+    height: 28px;
   }
   label{
     margin-top: 25px;
   }
   #contact-text{
-    margin-left: 0;
+    font-size: 22px;
+    margin-left: -5px;
   }
   #text{
     font-size: 18px;
     height: 200px;
   }
-  #text::placeholder, #mail::placeholder{
+  #text::-webkit-input-placeholder, #mail::-webkit-input-placeholder{
+    line-height: 20px;
+    font-size: 10px;
+    font-family: monospace;
     font-size: 18px;
   }
   input, select, textarea{
-    border-width: 4px;
+    border-width: 3px;
   }
   #country{
-    font-size: 20px;
+    font-size: 15px;
+    height: 35px;
   }
 }
 
@@ -511,5 +526,6 @@ label {
   }
   #contact{
     max-width: 600px;
+
   }
 }
