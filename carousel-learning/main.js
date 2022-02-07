@@ -8,14 +8,13 @@ function getImg(n){
 
 let currentImg = 2
 document.getElementById("change").onclick = ()=>{
-    getImg(currentImg).style.animation="back 1000ms "
+    getImg(currentImg).style.animation="active-to-after 1000ms "
     setTimeout(()=>{
         getImg(currentImg).classList.remove("active")
     },1000)
     currentImg--
-    getImg(currentImg).style.animation="go 1000ms"
+    getImg(currentImg).style.animation="before-to-active 1000ms"
     setTimeout(()=>{
         getImg(currentImg).classList.add("active")
     },1000)
-
 }

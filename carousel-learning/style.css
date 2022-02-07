@@ -16,38 +16,64 @@ body{
   right: 0;
   height: 100%;
 }
-
-.carousel{
-  height: 150px;
-  margin-left: 15px;
-  animation-fill-mode: forwards !important;
-}
-.active{
-  width: 350px;
-  height: 300px;
-}
 #change{
   margin-left: 50%;
   margin-top: 20px;
 }
+.carousel{
+  height: 150px;
+  width: 200px;
+  margin: auto 0;
+  animation-fill-mode: forwards !important;
+}
+.active{
+  width: 360px;
+  height: 260px;
+}
+.before, .after{
+  height: 200px;
+  width: 300px;
+}
 
-@keyframes back {
+@keyframes active-to-after {
   from{
     height: 300px;
     width: 350px;
   }
   to{
-    height: 150px;
-    width: auto;
+    height: 200px;
+    width: 300px;
   }
 }
-@keyframes go {
+@keyframes before-to-active {
   from{
     height: 150px;
-    width: auto;
+    width: 300px;
   }
   to{
     height: 300px;
     width: 350px;
+  }
+}
+
+@keyframes none-to-before {
+  from{
+    height: 150px;
+    width: 300px;
+  }
+  to{
+    height: 300px;
+    width: 350px;
+  }
+}
+
+@keyframes after-to-none {
+  from{
+    height: 300px;
+    width: 350px;
+  }
+  none{
+    height: 150px;
+    width: 300px;
   }
 }
