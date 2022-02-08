@@ -1,0 +1,9 @@
+.style.animation="active-to-after 1000ms "
+    setTimeout(()=>{
+        getImg(currentImg).classList.remove("active")
+    },1000)
+    currentImg--
+    getImg(currentImg).style.animation="before-to-active 1000ms"
+    setTimeout(()=>{
+        getImg(currentImg).classList.add("active")
+    },1000)

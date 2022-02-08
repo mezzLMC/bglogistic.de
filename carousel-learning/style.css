@@ -5,75 +5,142 @@
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  border: 1px solid black;
-  display: flex;
+  width: 750px;
+  position: relative;
+  height: 260px;
+  left: 50%;
+  transform: translateX(-50%);
+
 }
 body{
-  border: 1px solid blue;
   margin: 0;
   position: absolute;
   left: 0;
   right: 0;
   height: 100%;
+  background-color: #1A5F7A;
 }
 #change{
   margin-left: 50%;
-  margin-top: 20px;
+  margin-top: 100px;
 }
 .carousel{
+  position: absolute;
+  border-radius: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   height: 150px;
   width: 200px;
   margin: auto 0;
+  z-index: 0;
   animation-fill-mode: forwards !important;
+}
+.first{
+  left: 0;
+}
+.before{
+  left: 50px;
+}
+.after{
+  left: 350px;
+}
+.last{
+  left: 550px;
 }
 .active{
   width: 360px;
   height: 260px;
+  left: 180px;
+  z-index: 200;
 }
 .before, .after{
   height: 200px;
   width: 300px;
+  z-index: 100;
 }
-
-@keyframes active-to-after {
+#indicator{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  margin-top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.circle{
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  opacity: 0.5;
+  background-color: #999999;
+  border-radius: 100%;
+}
+.current{
+  opacity: 1;
+  background-color: #F4C827;
+  
+}
+@keyframes after-to-last {
   from{
-    height: 300px;
-    width: 350px;
+    z-index: 100;
+    width: 300px;
+    left: 350px;
+    height: 200px;
   }
   to{
+    z-index: 0;
+    left: 550px;
+    width: 200px;
+    height: 150px;
+  }
+}
+@keyframes first-to-before {
+  from{
+    left: 0;
+    z-index: 0;
+    height: 150px;
+    width: 200px;
+  }
+  to{
+    left: 50px;
+    z-index: 100;
     height: 200px;
     width: 300px;
   }
 }
+
 @keyframes before-to-active {
   from{
+    z-index: 100;
+    left: 50px;
     height: 150px;
     width: 300px;
   }
   to{
+    z-index: 200;
+    left: 180px;
     height: 300px;
     width: 350px;
   }
 }
-
-@keyframes none-to-before {
+@keyframes active-to-after {
   from{
-    height: 150px;
-    width: 300px;
+    z-index: 200;
+    left: 180px;
+    height: 300px;
+    width: 350px;
   }
   to{
-    height: 300px;
-    width: 350px;
+    z-index: 100;
+    left: 350px;
+    height: 200px;
+    width: 300px;
   }
 }
-
-@keyframes after-to-none {
+@keyframes last-to-first {
   from{
-    height: 300px;
-    width: 350px;
+    left:550px;
   }
-  none{
-    height: 150px;
-    width: 300px;
+  to{
+    left: 0;
   }
 }
