@@ -1,27 +1,40 @@
 import './style.css'
 
-const changePlace = function(oldClass, newClass, anime){
+const changePlace = async function(oldClass, newClass, anime){
     let element = document.getElementsByClassName(oldClass)[0]
     element.style.animation=`${anime} 1000ms`
-    setTimeout(()=>{
+    setTimeout(() => {
         element.classList.remove(oldClass)
         element.classList.add(newClass)
-    },1000)
-    
+    }, 1000)
+
 }
+
+
+
+
+
+
+
+
+
+
 
 let currentImg = 0
 
-document.getElementById("change").onclick = ()=>{
 
+document.getElementById("change").onclick = rightSwipe
+
+async function rightSwipe(){
+    document.getElementById("change").onclick = function (){}
     let indicators = document.getElementsByClassName("circle")
     indicators[currentImg].classList.remove("current")
-    currentImg == 4 ? currentImg = 0 : currentImg++
+    currentImg === 4 ? currentImg = 0 : currentImg++
     indicators[currentImg].classList.add("current")
-    changePlace("first", "before", "first-to-before")
-    changePlace("active","after", "active-to-after")
-    changePlace("before","active", "before-to-active")
-    changePlace("after", "last", "after-to-last")
-    changePlace("last", "first", "last-to-first")
-    
+    await changePlace("first", "before", "first-to-before")
+    await changePlace("active","after", "active-to-after")
+    await changePlace("before","active", "before-to-active")
+    await changePlace("after", "last", "after-to-last")
+    await changePlace("last", "first", "last-to-first")
+    document.getElementById("change").onclick = rightSwipe
 }
