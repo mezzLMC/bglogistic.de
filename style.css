@@ -10,10 +10,6 @@
   --blue: #1A5F7A;
 }
 
-.h1, h1 {
-  font-size: 44px;
-}
-
 .row{
   justify-content: space-between;
   display: flex;
@@ -50,7 +46,6 @@ body{
   height: 100%;
   font-family: "Domine", cursive;
   color: #2B2B29;
-  font-size: 328px;
   margin: 0;
   top: 50%;
   transform: translateY(-50%);
@@ -166,8 +161,6 @@ body{
   font-family: Domine, cursive;
   font-style: normal;
   font-weight: bold;
-  font-size: 54px;
-  line-height: 60px;
   letter-spacing: 0.045em;
   color: #2B2B29;
   text-align: center;
@@ -284,7 +277,6 @@ label {
   font-weight: bold;
   letter-spacing: -5%;
   font-size: 29px;
-  margin-left: -150px;
 }
 
 #mail{
@@ -354,7 +346,6 @@ label {
   margin-left: 30px;
 }
 
-
 .footer-info{
   display: inline-flex;
   flex-direction: row;
@@ -374,8 +365,6 @@ label {
   margin: auto;
   top: 50%;
 }
-
-
 
 
 
@@ -511,17 +500,63 @@ label {
     font-size: 15px;
     height: 35px;
   }
+  #footer-img{
+    height: 150px;
+  }
+  #footer-content{
+    width: 85%;
+  }
+  #footer-info{
+    flex-direction: column;
+    width: max-content;
+    margin: auto;
+  }
+  .footer-info a{
+    font-size: 24px;
+    margin-left: 0;
+  }
+  .footer-info:nth-child(2){
+    margin-left: 10px;
+  }
 }
 
-@media only screen  and (min-width : 1224px) {
+@media only screen and (min-width: 768px) {
+  .category{
+    font-size: 36px;
+  }
+  .category::after{
+    width: 250px;
+  }
+  #footer-info{
+    flex-direction: column;
+  }
+  .footer-info a{
+    font-size: 30px;
+    margin-left: 0;
+  }
+  .footer-info:nth-child(2){
+    margin-left: 10px;
+  }
+  #animation-cover{
+    font-size: 190px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .category{
+    font-size: 40px;
+  }
+  .category::after{
+    width: 250px;
+  }
+}
+
+@media only screen  and (min-width : 1200px) {
   #header{
     height: 65px;
   }
   .contacts{
     font-size: 23px;
-  }
-  .category{
-    font-size: 40px;
   }
   #hero{
     margin-top: 0;
@@ -559,11 +594,23 @@ label {
     margin-top: 0;
     text-align: left;
   }
-  .category::after{
-    width: 250px;
-  }
   #contact{
     max-width: 600px;
-
+  }
+  #contact-text{
+    margin-left: -150px;
+  }
+  #footer{
+    height: 500px;
+  }
+  .footer-info a{
+    font-size: 28px;
+  }
+  .h1, h1 {
+    font-size: 44px;
+  }
+  #animation-cover{
+    font-size: 328px;
   }
 }
+
