@@ -13,7 +13,7 @@
 .row{
   justify-content: space-between;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 body{
@@ -74,7 +74,7 @@ body{
 }
 
 #header{
-  z-index: 1;
+  z-index: 10000;
   background: var(--yellow);
   position: fixed;
   top: 0;
@@ -89,7 +89,93 @@ body{
   transform: translateY(-50%);
   left: 10px;
 }
+#langage{
+  background-color: transparent;
+  width: 110px;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  z-index: 1000;
+  border-left: 2px solid #595A5B;
+  border-bottom: 2px solid #595A5B;
 
+  box-sizing: content-box;
+}
+#langage__list{ 
+  width: 110px;
+  right: 0;
+  z-index: 700;
+  height: 0px;
+  transition: height 500ms;
+  overflow: hidden;
+  position: fixed;
+  background-color: #F4C827;
+  top: 79px;
+  display: flex;
+  flex-direction: column;
+}
+#langage img{
+  background-color: transparent;
+  position: absolute;
+  margin: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  border: none;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  height: 15px;
+  right: 10px;
+  transition: transform 250ms;
+}
+
+#langage img:hover{
+  transform: translateY(-50%);
+}
+
+#lang__icon{
+  background-size: cover;
+  width: 35px;
+  height: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  position: absolute;
+  border-radius: 100%;
+  border: 3px solid #595A5B;
+  background-image: url(./assets/Flag_of_Germany.png);
+  filter: drop-shadow(0px 7px 22px rgba(0, 0, 0, 0.14)) drop-shadow(0px 5.09141px 14.8285px rgba(0, 0, 0, 0.113312)) drop-shadow(0px 3.54375px 9.59062px rgba(0, 0, 0, 0.0945)) drop-shadow(0px 2.32422px 5.95117px rgba(0, 0, 0, 0.0809375)) drop-shadow(0px 1.4px 3.575px rgba(0, 0, 0, 0.07)) drop-shadow(0px 0.738281px 2.12695px rgba(0, 0, 0, 0.0590625)) drop-shadow(0px 0.30625px 1.27188px rgba(0, 0, 0, 0.0455)) drop-shadow(0px 0.0710938px 0.674609px rgba(0, 0, 0, 0.0266875));
+}
+.lang{
+  font-family: "Inter";
+  display: flex;
+  height: 50px;
+  flex-direction: row;
+  border-bottom: 1px solid rgba(89, 90, 91, 0.31);
+  color: #595A5B;
+}
+.lang p{
+  display: none;
+}
+.lang *{
+  margin: auto;
+}
+.code{
+  font-weight: 800;
+  height: max-content;
+}
+.flag{
+  margin-left: 2px;
+  height: 32px;
+  width: 32px;
+  border-radius: 100%;
+  border: 2px solid #595A5B;
+}
+
+#services-question{
+  font-size: 29px;
+  line-height: 37px;
+}
 #contact-bar{
   justify-content: space-between;
   display: flex;
@@ -152,7 +238,6 @@ body{
   letter-spacing: -0.105em;
 }
 #center{
-  width: 70%;
   margin: 30px auto auto;
   padding: 0;
 }
@@ -164,8 +249,9 @@ body{
   letter-spacing: 0.045em;
   color: #2B2B29;
   text-align: center;
-  margin-top: 30px;
-
+  margin-top: 30px; 
+  font-size: 32px;
+  line-height: 100%;
 
 }
 .category::after{
@@ -174,12 +260,12 @@ body{
   width: auto;
   height: 13px;
   margin: auto;
+  margin-top: 10px;
   background: url("./assets/underline.svg") no-repeat center;
   background-size: 100% 100%;
 }
 
 .category-content{
-  max-width: 900px;
   color: #595A5B;
   font-family: Gotham, serif;
   font-style: normal;
@@ -197,20 +283,19 @@ body{
 #services-question{
   margin-top: 40px;
   font-weight: bold;
-  font-size: 38px;
-  line-height: 44px;
+  font-size: 30px;
+  line-height: 40px;
   text-align: center;
   letter-spacing: -0.05em;
 }
 .services-text{
-  font-weight: 500;
-  font-size: 36px;
+  font-weight: 400;
+  font-size: 32px;
   line-height: 38px;
   text-align: center;
 }
 #engagements{
   margin-top: 100px;
-  max-width: 1000px
 }
 
 .engagements-icon{
@@ -227,9 +312,15 @@ body{
   left: 50%;
   top: 50%;
   transform: translateY(-50%) translateX(-50%);
+  max-width: 180px;
 }
 .engagements-col{
+  margin: auto;
   margin-top: 50px;
+  max-width: 500px;
+}
+.engagements-col:nth-child(1){
+  margin-top: 0;
 }
 .engagements-col p{
   width: 100%;
@@ -240,7 +331,7 @@ body{
   color: #1A5F7A;
   font-weight: bold;
   font-family: "Inter", serif;
-  font-size: 42px;
+  font-size: 32px;
 }
 .engagements-text{
   font-family: Gotham, serif;
@@ -328,8 +419,9 @@ label {
   height: 600px;
   position: relative;
 }
+
 #footer-img{
-  height: 220px;
+  height: 150px;
 }
 #footer-content{
   position: absolute;
@@ -369,13 +461,9 @@ label {
 
 
 @media only screen and (max-width: 600px) {
-  .row{
-    flex-direction: column;
-  }
   h1 {  
     font-size: 35px;
   }
-
   #animation-title{
     font-size: 150px;
     width: 100%;
@@ -409,10 +497,6 @@ label {
     padding-right: 20px;
   }
 
-  #services-question{
-    font-size: 29px;
-    line-height: 37px;
-  }
   .services-text{
     font-size: 25px;
     line-height: 30px;
@@ -450,12 +534,6 @@ label {
   .category::after{
     width: 210px;
     margin-top: 10px;
-
-  }
-  .category{
-    font-size: 32px;
-    margin-bottom: 0;
-    line-height: 100%;
   }
 
   #blg-logo{
@@ -500,9 +578,6 @@ label {
     font-size: 15px;
     height: 35px;
   }
-  #footer-img{
-    height: 150px;
-  }
   #footer-content{
     width: 85%;
   }
@@ -518,14 +593,21 @@ label {
   .footer-info:nth-child(2){
     margin-left: 10px;
   }
+  
 }
 
 @media only screen and (min-width: 768px) {
+  #contact{
+    max-width: 650px;
+  }
   .category{
     font-size: 36px;
   }
   .category::after{
     width: 250px;
+  }
+  #services{
+    max-width: 700px;
   }
   #footer-info{
     flex-direction: column;
@@ -549,11 +631,32 @@ label {
   .category::after{
     width: 250px;
   }
+  .row{
+    flex-direction: row;
+  }
+  .engagements-text{
+    font-size: 22px;
+  }
+  #engagements{
+    max-width: 850px;
+  }
+  .engagements-icon img{
+    max-width: 150px;
+  }
+  .engagements-col{
+    margin-top: 0;
+  }
+  #contact{
+    max-width: 700px;
+  }
 }
 
 @media only screen  and (min-width : 1200px) {
   #header{
     height: 65px;
+  }
+  #langage__list{
+    height: 64px;
   }
   .contacts{
     font-size: 23px;
@@ -561,19 +664,9 @@ label {
   #hero{
     margin-top: 0;
   }
-  #services-question{
-    font-size: 26px;
-    margin-bottom: 0;
-  }
   .services-text{
     font-size: 24px;
     line-height: 28px;
-  }
-  .category-content{
-    max-width: 700px;
-  }
-  .engagements-icon img{
-    max-width: 150px;
   }
   #polyvalent{
     max-width: 200px;
@@ -581,10 +674,6 @@ label {
   .engagements-name{
     font-size: 28px;
     font-weight: 700;
-  }
-  .engagements-text{
-    font-size: 22px;
-    font-weight: 500;
   }
   #engagements{
     min-width: 950px
@@ -594,14 +683,11 @@ label {
     margin-top: 0;
     text-align: left;
   }
-  #contact{
-    max-width: 600px;
-  }
   #contact-text{
     margin-left: -150px;
   }
   #footer{
-    height: 500px;
+    height: 450px;
   }
   .footer-info a{
     font-size: 28px;
@@ -611,6 +697,12 @@ label {
   }
   #animation-cover{
     font-size: 328px;
+  }
+  #footer-content{
+    width: max-content;
+  }
+  #footer-info{
+    flex-direction: row;
   }
 }
 
