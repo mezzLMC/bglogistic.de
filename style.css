@@ -20,7 +20,6 @@ body{
   margin: 0;
   padding: 0;
   background: white;
-  z-index: 10;
   width: 100%;
   overflow-x: hidden;
 }
@@ -36,9 +35,9 @@ body{
   animation-fill-mode: forwards !important;
 }
 
-#animation-cover{
+#animation-loader{
   position: fixed;
-  z-index: 1000;
+  z-index: 10000;
   background: #FEF7EC url("./assets/Vector.svg") no-repeat center;
   background-size: cover;
   left: 0;
@@ -48,10 +47,13 @@ body{
   color: #2B2B29;
   margin: 0;
   top: 50%;
+  display: none;
   transform: translateY(-50%);
-  animation-fill-mode: forwards !important;
+  /*
+   animation-fill-mode: forwards !important;
   animation: left-cover 1500ms;
   animation-delay: 1500ms !important;
+   */
 
 }
 
@@ -74,7 +76,7 @@ body{
 }
 
 #header{
-  z-index: 10000;
+  z-index: 1000;
   background: var(--yellow);
   position: fixed;
   top: 0;
@@ -91,41 +93,39 @@ body{
 }
 #langage{
   background-color: transparent;
-  width: 110px;
+  width: 130px;
   top: 0;
   bottom: 0;
   position: absolute;
   right: 0;
   z-index: 1000;
-  border-left: 2px solid #595A5B;
-  border-bottom: 2px solid #595A5B;
-
+  border-left: 1px solid rgba(89, 90, 91, 0.7);
+  border-bottom: 1px solid rgba(89, 90, 91, 0.7);
   box-sizing: content-box;
 }
-#langage__list{ 
-  width: 110px;
+#langage__list{
+  width: 130px;
   right: 0;
-  z-index: 700;
-  height: 0px;
+  z-index: 20000;
+  height: 0;
   transition: height 500ms;
   overflow: hidden;
   position: fixed;
   background-color: #F4C827;
-  top: 79px;
+  top: 80px;
   display: flex;
   flex-direction: column;
+  box-shadow: 0px 39px 80px rgba(0, 0, 0, 0.16), 0px 15.0222px 25.4815px rgba(0, 0, 0, 0.0971852), 0px 3.17778px 6.51852px rgba(0, 0, 0, 0.0628148);
 }
 #langage img{
   background-color: transparent;
   position: absolute;
-  margin: 0;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin: auto 0;
   border: none;
   top: 50%;
-  transform: translateY(-50%) rotate(-90deg);
-  height: 15px;
-  right: 10px;
+  transform: translateY(-50%);
+  height: 65px;
+  right: 5px;
   transition: transform 250ms;
 }
 
@@ -135,21 +135,21 @@ body{
 
 #lang__icon{
   background-size: cover;
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   top: 50%;
   transform: translateY(-50%);
   left: 10px;
   position: absolute;
   border-radius: 100%;
-  border: 3px solid #595A5B;
+  border: 2px solid #595A5B;
+  box-sizing: content-box;
   background-image: url(./assets/Flag_of_Germany.png);
-  filter: drop-shadow(0px 7px 22px rgba(0, 0, 0, 0.14)) drop-shadow(0px 5.09141px 14.8285px rgba(0, 0, 0, 0.113312)) drop-shadow(0px 3.54375px 9.59062px rgba(0, 0, 0, 0.0945)) drop-shadow(0px 2.32422px 5.95117px rgba(0, 0, 0, 0.0809375)) drop-shadow(0px 1.4px 3.575px rgba(0, 0, 0, 0.07)) drop-shadow(0px 0.738281px 2.12695px rgba(0, 0, 0, 0.0590625)) drop-shadow(0px 0.30625px 1.27188px rgba(0, 0, 0, 0.0455)) drop-shadow(0px 0.0710938px 0.674609px rgba(0, 0, 0, 0.0266875));
 }
 .lang{
   font-family: "Inter";
   display: flex;
-  height: 50px;
+  height: 150px;
   flex-direction: row;
   border-bottom: 1px solid rgba(89, 90, 91, 0.31);
   color: #595A5B;
@@ -163,13 +163,25 @@ body{
 .code{
   font-weight: 800;
   height: max-content;
+  font-size: 20px;
 }
 .flag{
   margin-left: 2px;
-  height: 32px;
-  width: 32px;
-  border-radius: 100%;
+  height: 45px;
+  width: 45px;
+  box-sizing: border-box;
   border: 2px solid #595A5B;
+  border-radius: 100%;
+  background-size: 100% 100%;
+}
+#french{
+  background-image: url("./assets/Flag_of_France.svg");
+}
+#german{
+  background-image: url("./assets/Flag_of_Germany.png");
+}
+#english{
+  background-image: url("./assets/Flag_of_the_United_Kingdom_(3-5).svg.png");
 }
 
 #services-question{
@@ -205,26 +217,25 @@ body{
   content: "";
   display: inline;
 }
+#hero__container{
+  justify-content: normal;
+}
 
 #hero{
   background: var(--blue);
   width: 100%;
-  height: 597px;
-  margin-top: 80px;
-  padding-left: 20px;
+  height: auto;
+  padding-bottom: 50px;
+  margin-top: 60px;
   position: relative;
   box-shadow: 0px 72px 80px rgba(0, 0, 0, 0.1), 0px 46.6667px 46.8519px rgba(0, 0, 0, 0.0759259), 0px 27.7333px 25.4815px rgba(0, 0, 0, 0.0607407), 0px 14.4px 13px rgba(0, 0, 0, 0.05), 0px 5.86667px 6.51852px rgba(0, 0, 0, 0.0392593), 0px 1.33333px 3.14815px rgba(0, 0, 0, 0.0240741);
 }
 
 #hero-title{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   font-family: Work Sans, serif;
   font-style: normal;
   color: white;
   width: 50%;
-  margin-top: -20px;
 }
 #hero-title1{
   font-weight: bold;
@@ -249,7 +260,7 @@ body{
   letter-spacing: 0.045em;
   color: #2B2B29;
   text-align: center;
-  margin-top: 30px; 
+  margin-top: 30px;
   font-size: 32px;
   line-height: 100%;
 
@@ -351,7 +362,6 @@ input::placeholder, textarea::placeholder{
   font-family: Gotham, monospace;
   font-size: 24px;
   color: #6C6C6C;
-  letter-spacing: 4.5%;
 }
 
 
@@ -364,9 +374,9 @@ label {
 }
 
 #contact-text{
-  font-family: Gotham;
+  font-family: Gotham, cursive;
   font-weight: bold;
-  letter-spacing: -5%;
+  letter-spacing: -0.05em;
   font-size: 29px;
 }
 
@@ -383,7 +393,7 @@ label {
   font-weight: 600;
 }
 #text{
-  width: 100%;
+  width: 95%;
   height: 250px;
   padding: 10px;
   font-size: 18px;
@@ -391,23 +401,23 @@ label {
 }
 
 #contact-submit{
-    display: block;
-    border-radius: 8px;
-    background-color: var(--blue);
-    border: none;
-    height: 40px;
-    width: 150px;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    color: white;
-    font-family: Gotham;
-    font-weight: bold;
-    font-size: 22px;
-    box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.07), 0px 15.5556px 46.8519px rgba(0, 0, 0, 0.0531481), 0px 9.24444px 25.4815px rgba(0, 0, 0, 0.0425185), 0px 4.8px 13px rgba(0, 0, 0, 0.035), 0px 1.95556px 6.51852px rgba(0, 0, 0, 0.0274815), 0px 0.444444px 3.14815px rgba(0, 0, 0, 0.0168519);
+  display: block;
+  border-radius: 8px;
+  background-color: var(--blue);
+  border: none;
+  height: 40px;
+  width: 150px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  color: white;
+  font-family: Gotham;
+  font-weight: bold;
+  font-size: 22px;
+  box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.07), 0px 15.5556px 46.8519px rgba(0, 0, 0, 0.0531481), 0px 9.24444px 25.4815px rgba(0, 0, 0, 0.0425185), 0px 4.8px 13px rgba(0, 0, 0, 0.035), 0px 1.95556px 6.51852px rgba(0, 0, 0, 0.0274815), 0px 0.444444px 3.14815px rgba(0, 0, 0, 0.0168519);
 }
 #contact-submit:hover{
-    transform: scale(1.03);
+  transform: scale(1.03);
 }
 #contact-submit:active{
   transform: scale(0.97);
@@ -461,20 +471,43 @@ label {
 
 
 @media only screen and (max-width: 600px) {
-  h1 {  
+  #langage, #langage__list{
+    width: 85px;
+  }
+  #langage{
+  }
+  #langage img{
+    height: 35px;
+  }
+  #lang__icon, .flag{
+    width: 30px;
+    height: 30px;
+  }
+  .lang{
+    height: 60px;
+  }
+  #langage__list{
+    height: 0;
+    top: 60px;
+  }
+
+  #header{
+    height: 60px;
+  }
+  h1 {
     font-size: 35px;
   }
   #animation-title{
     font-size: 150px;
     width: 100%;
   }
-  #animation-cover{
+  #animation-loader{
     background: #FEF7EC url("./assets/phone-cover.svg") no-repeat center;
     background-size: 100% 100%;
     width: 100%;
   }
   #center{
-    width: 80%;
+    width: 90%;
   }
   #hero-title{
     top: 8%;
@@ -496,10 +529,17 @@ label {
     padding-left: 20px;
     padding-right: 20px;
   }
-
+  #services-question{
+    font-size: 23px;
+    line-height: 28px;
+  }
   .services-text{
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 25px;
+    margin-top: 20px;
+  }
+  #services p:nth-child(4){
+    margin-top: 10px;
   }
   .engagements-icon{
     height: auto;
@@ -516,21 +556,19 @@ label {
     max-width: 130px;
   }
   #engagements{
-    max-width: 250px;
+    position: relative;
   }
-  #engagements .category{
-    font-size: 40px;
-    margin-left: -15px;
-    width: max-content;
-  }
+ .category{
+   font-size: 28px;
+ }
   .engagements-name{
     font-size: 28px;
 
   }
   .engagements-text{
-    font-size: 25px
+    font-size: 22px;
+    font-weight: 400;
   }
-
   .category::after{
     width: 210px;
     margin-top: 10px;
@@ -550,9 +588,9 @@ label {
     width: 100%;
   }
   #mail{
-    width:100%;
+    max-width:95%;
     padding-left: 10px;
-    height: 28px;
+    height: 36px;
   }
   label{
     margin-top: 25px;
@@ -567,7 +605,6 @@ label {
   }
   #text::-webkit-input-placeholder, #mail::-webkit-input-placeholder{
     line-height: 20px;
-    font-size: 10px;
     font-family: monospace;
     font-size: 18px;
   }
@@ -576,7 +613,7 @@ label {
   }
   #country{
     font-size: 15px;
-    height: 35px;
+    height: 38px;
   }
   #footer-content{
     width: 85%;
@@ -593,7 +630,7 @@ label {
   .footer-info:nth-child(2){
     margin-left: 10px;
   }
-  
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -619,12 +656,31 @@ label {
   .footer-info:nth-child(2){
     margin-left: 10px;
   }
-  #animation-cover{
+  #animation-loader{
     font-size: 190px;
   }
 }
 
 @media only screen and (min-width: 992px) {
+  .h1, h1 {
+    font-size: 42px;
+  }
+  #hero{
+    height: 350px;
+    margin-top: 0px;
+
+  }
+  #hero__container{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  #hero-title2{
+    font-size: 36px;
+  }
+  #hero-title{
+    padding-left: 20px;
+  }
   .category{
     font-size: 40px;
   }
@@ -651,18 +707,15 @@ label {
   }
 }
 
-@media only screen  and (min-width : 1200px) {
-  #header{
-    height: 65px;
+@media only screen  and (min-width : 1224px) {
+  #hero{
+    height: 597px;
   }
-  #langage__list{
-    height: 64px;
+  #carousel__container{
+    margin-left: 0px;
   }
   .contacts{
     font-size: 23px;
-  }
-  #hero{
-    margin-top: 0;
   }
   .services-text{
     font-size: 24px;
@@ -705,4 +758,3 @@ label {
     flex-direction: row;
   }
 }
-

@@ -10,23 +10,13 @@ const changePlace = async function(oldClass, newClass, anime){
 
 }
 
-
-
-
-
-
-
-
-
-
-
 let currentImg = 0
 
 
-document.getElementById("change").onclick = rightSwipe
+//document.getElementById("change").onclick = rightSwipe
 
 async function rightSwipe(){
-    document.getElementById("change").onclick = function (){}
+    //document.getElementById("change").onclick = function (){}
     let indicators = document.getElementsByClassName("circle")
     indicators[currentImg].classList.remove("current")
     currentImg === 4 ? currentImg = 0 : currentImg++
@@ -38,3 +28,6 @@ async function rightSwipe(){
     await changePlace("last", "first", "last-to-first")
     document.getElementById("change").onclick = rightSwipe
 }
+
+
+setInterval(()=>rightSwipe(),2000)

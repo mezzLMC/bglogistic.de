@@ -7,46 +7,69 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div id="animation-cover">
+    <div id="animation-loader">
       <p id="animation-title">BGL</p>
     </div>
     <div id="langage__list">
       <div class="lang">
         <div class="code">DE</div>
-        <img src="./assets/Flag_of_Germany.png" alt="" class="flag">
+        <div id="german" class="flag"></div>
         <p>Deutsch</p> 
       </div>
       <div class="lang">
         <div class="code">FR</div>
-        <img src="./assets/Flag_of_Germany.png" alt="" class="flag">
+        <div id="french" class="flag"></div>
         <p>Deutsch</p> 
       </div>
       <div class="lang">
         <div class="code">EN</div>
-        <img src="./assets/Flag_of_Germany.png" alt="" class="flag">
-        <p>Deutsch</p> 
+        <div id="english" class="flag"></div>
+        <p>Deutsch</p>
       </div>
       </div>
     <div id="header">
       <img src="./assets/BGL.svg" alt="" id="blg-logo">
       <div id="contact-bar">
-        <p class="contacts">+49 1575 0205928</p>
+        <p class="contacts"><a href="+4915750205928">+49 1575 0205928</a></p>
         <p class="contacts">+49 1577 5636701</p>
         <p class="contacts">+33 7 4915 4114</p>
       </div>
       <div id="langage">
         <div id="lang__icon">
         </div>
-          <img  id="langage__drop" src="assets/drop.svg" />
+          <img id="langage__drop" src="assets/caret-right.svg" />
       </div>
     </div>
     <div id="hero">
-      <div id="hero-title">
-        <h1 id="hero-title1">
-          Ihre Referenz für Logistiklösungen in Europa
-        </h1>
-        <div id="hero-title2">
-          BGL Logistic unterstützt Sie bei Ihrem Bedarf an Waren-, Güter- und Fahrzeugtransporten.        </div>
+      <div id="hero__container" class="row">
+        <div id="hero-title">
+          <h1 id="hero-title1">
+            Ihre Referenz für Logistiklösungen in Europa
+          </h1>
+          <div id="hero-title2">
+            BGL Logistic unterstützt Sie bei Ihrem Bedarf an Waren-, Güter- und Fahrzeugtransporten.
+          </div>
+        </div>
+        <div id="carousel__container">
+          <div id="carousel">
+            <img src="assets/1.png" class="carousel first" alt="">
+            <img src="assets/2.png" class="carousel before" alt="">
+            <img src="assets/3.png" class="carousel active" id="test" alt="">
+            <img src="assets/4.png" class="carousel after" alt="">
+            <img src="assets/5.png" class="carousel last" alt="">
+          </div>
+          <div id="indicator__container">
+            <div id="indicator">
+              <img class="arrow"  id="arrow__left" src="./assets/arrow.svg">
+              <div class="circle current"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <img class="arrow" id="arrow__right" src="./assets/arrow.svg">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div id="center">
@@ -100,7 +123,7 @@
           <textarea name="" id="text" placeholder="Beschreiben Sie Ihre Situation und erwähnen Sie alle Informationen, die Sie wissen möchten..."></textarea>
       </div>
         <div style="width: 100%;">
-          <button id="contact-submit">Submit</button>
+          <button id="contact-submit">senden</button>
         </div>
       </div>
     </div>
