@@ -49,11 +49,9 @@ body{
   top: 50%;
   display: none;
   transform: translateY(-50%);
-  /*
    animation-fill-mode: forwards !important;
   animation: left-cover 1500ms;
   animation-delay: 1500ms !important;
-   */
 
 }
 
@@ -122,6 +120,7 @@ body{
   position: absolute;
   margin: auto 0;
   border: none;
+
   top: 50%;
   transform: translateY(-50%);
   height: 65px;
@@ -144,9 +143,9 @@ body{
   border-radius: 100%;
   border: 2px solid #595A5B;
   box-sizing: content-box;
-  background-image: url(./assets/Flag_of_Germany.png);
 }
 .lang{
+  text-decoration: none;
   font-family: "Inter";
   display: flex;
   height: 150px;
@@ -172,15 +171,16 @@ body{
   box-sizing: border-box;
   border: 2px solid #595A5B;
   border-radius: 100%;
-  background-size: 100% 100%;
+  background-size: 130% 130%;
+  background-position: center;
 }
-#french{
+.french{
   background-image: url("./assets/Flag_of_France.svg");
 }
-#german{
+.german{
   background-image: url("./assets/Flag_of_Germany.png");
 }
-#english{
+.english{
   background-image: url("./assets/Flag_of_the_United_Kingdom_(3-5).svg.png");
 }
 
@@ -347,7 +347,7 @@ body{
 .engagements-text{
   font-family: Gotham, serif;
   font-weight: 500;
-  line-height: 115.7%;
+  line-height: 31px;
   margin-top: 10px !important;
   font-size: 30px;
 }
@@ -366,9 +366,10 @@ input::placeholder, textarea::placeholder{
 
 
 label {
-  display:block;
+  display: inline-block;
   color: #474747;
   font-size: 18px;
+  width: 100%;
   font-weight: 500;
   padding-bottom: 5px;
 }
@@ -474,8 +475,6 @@ label {
   #langage, #langage__list{
     width: 85px;
   }
-  #langage{
-  }
   #langage img{
     height: 35px;
   }
@@ -535,8 +534,8 @@ label {
   }
   .services-text{
     font-size: 20px;
-    line-height: 25px;
-    margin-top: 20px;
+    line-height: 22px;
+    margin-top: 1px;
   }
   #services p:nth-child(4){
     margin-top: 10px;
@@ -594,6 +593,7 @@ label {
   }
   label{
     margin-top: 25px;
+    
   }
   #contact-text{
     font-size: 22px;
@@ -615,6 +615,13 @@ label {
     font-size: 15px;
     height: 38px;
   }
+
+  #footer{
+    height: 450px;
+  }
+  #footer-img{
+    height: 150px;
+  }
   #footer-content{
     width: 85%;
   }
@@ -624,7 +631,7 @@ label {
     margin: auto;
   }
   .footer-info a{
-    font-size: 24px;
+    font-size: 22px;
     margin-left: 0;
   }
   .footer-info:nth-child(2){
