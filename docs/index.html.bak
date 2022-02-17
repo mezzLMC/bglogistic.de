@@ -2,14 +2,14 @@
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <link rel="alternate" href="assets/index.71f03987.html" hreflang="en">
-    <link rel="alternate" href="assets/index.284efddd.html" hreflang="fr">
-    <link rel="alternate" href="assets/index.f9044383.html" hreflang="de">
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.17e50649.svg" />
+    <link rel="alternate" href="/assets/index.71f03987.html" hreflang="en">
+    <link rel="alternate" href="/assets/index.284efddd.html" hreflang="fr">
+    <link rel="alternate" href="/assets/index.f9044383.html" hreflang="de">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.17e50649.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-    <script type="module" crossorigin src="assets/index.edec03f7.js"></script>
-    <link rel="stylesheet" href="assets/index.33a7bc03.css">
+    <script type="module" crossorigin src="/assets/index.edec03f7.js"></script>
+    <link rel="stylesheet" href="/assets/index.33a7bc03.css">
   </head>
   <body>
     <div id="animation-loader">
@@ -33,7 +33,7 @@
       </a>
       </div>
     <div id="header">
-      <img src="assets/BGL.9c89b0d8.svg" alt="" id="blg-logo">
+      <img src="/assets/BGL.9c89b0d8.svg" alt="" id="blg-logo">
       <div id="contact-bar">
         <p class="contacts"><a href="+4915750205928">+49 1575 0205928</a></p>
         <p class="contacts">+49 1577 5636701</p>
@@ -42,7 +42,7 @@
       <div id="langage">
         <div id="lang__icon" class="german">
         </div>
-          <img id="langage__drop" src="assets/caret-right.b2805de3.svg" />
+          <img id="langage__drop" src="/assets/caret-right.b2805de3.svg" />
       </div>
     </div>
     <div id="hero">
@@ -57,21 +57,21 @@
         </div>
         <div id="carousel__container">
           <div id="carousel">
-            <img src="assets/1.e8ea84fc.png" class="carousel first" alt="">
-            <img src="assets/2.aa449b15.png" class="carousel before" alt="">
-            <img src="assets/3.9920fbb2.png" class="carousel active" id="test" alt="">
-            <img src="assets/4.bb716513.png" class="carousel after" alt="">
-            <img src="assets/5.e97bd8d9.png" class="carousel last" alt="">
+            <img src="/assets/1.e8ea84fc.png" class="carousel first" alt="">
+            <img src="/assets/2.aa449b15.png" class="carousel before" alt="">
+            <img src="/assets/3.9920fbb2.png" class="carousel active" id="test" alt="">
+            <img src="/assets/4.bb716513.png" class="carousel after" alt="">
+            <img src="/assets/5.e97bd8d9.png" class="carousel last" alt="">
           </div>
           <div id="indicator__container">
             <div id="indicator">
-              <img class="arrow"  id="arrow__left" src="assets/arrow.a60158e7.svg">
+              <img class="arrow"  id="arrow__left" src="/assets/arrow.a60158e7.svg">
               <div class="circle current"></div>
               <div class="circle"></div>
               <div class="circle"></div>
               <div class="circle"></div>
               <div class="circle"></div>
-              <img class="arrow" id="arrow__right" src="assets/arrow.a60158e7.svg">
+              <img class="arrow" id="arrow__right" src="/assets/arrow.a60158e7.svg">
             </div>
           </div>
         </div>
@@ -88,17 +88,17 @@
         <p class="category">VERPFLICHTUNGEN</p>
         <div class="row">
           <div class="engagements-col">
-            <p class="engagements-icon"><img src="assets/time.4d9cfa0b.svg" alt=""></p>
+            <p class="engagements-icon"><img src="/assets/time.4d9cfa0b.svg" alt=""></p>
             <p class="engagements-name">Effektivität</p>
             <p class="engagements-text">Immer bequeme Zeiten für sie, schnell und passend, einfach anrufen und passenden Termin vereinbaren. Ihr Auto oder ihre Wertsachen werden immer rechtzeitig ankommen.</p>
           </div>
           <div class="engagements-col">
-            <p class="engagements-icon"><img  src="assets/heavy.cb2ea770.svg" alt="" width="150"></p>
+            <p class="engagements-icon"><img  src="/assets/heavy.cb2ea770.svg" alt="" width="150"></p>
             <p class="engagements-name">Ausdauer</p>
             <p class="engagements-text">Wir transportieren Fahrzeuge bis 2 Tonnen, und andere Wertsachen bis zu einem Gesamtgewicht von 3.5 tonnen</p>
           </div>
           <div class="engagements-col">
-            <p class="engagements-icon"><img src="assets/vehicles.19e57ff5.svg" id="polyvalent" alt=""></p>
+            <p class="engagements-icon"><img src="/assets/vehicles.19e57ff5.svg" id="polyvalent" alt=""></p>
             <p class="engagements-name">vielseitig</p>
             <p class="engagements-text">Wir transportieren Autos, Scooter, Motorräder und jegliche weiter Wertsachen oder Pakete.</p>
           </div>
@@ -133,14 +133,14 @@
     </div>
     <div id="footer">
       <div id="footer-content">
-        <img id="footer-img" src="assets/bgl_logistic.ebb09cc0.svg"  alt="" />
+        <img id="footer-img" src="/assets/bgl_logistic.ebb09cc0.svg"  alt="" />
           <div id="footer-info">
             <div class="footer-info">
-              <img src="assets/phone_grey.8a5fbc9a.svg">
+              <img src="/assets/phone_grey.8a5fbc9a.svg">
               <a href="https://youtube.com">+49 1577 5636701</a>
             </div>
             <div class="footer-info">
-              <img src="assets/envelope.db744afc.svg">
+              <img src="/assets/envelope.db744afc.svg">
               <a href="mailto:Bglogistik@yahoo.com">Bglogistik@yahoo.com</a>
             </div>
           </div>
