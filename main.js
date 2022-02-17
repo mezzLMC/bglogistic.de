@@ -2,24 +2,30 @@ import './style.css'
 import './carousel.css'
 import './carousel_anime.css'
 
-
-const changePlace = async function(oldClass, newClass, anime){
+function detectMob() {
+    const toMatch = [
+        /Android/i,
+        /webOS/i,
+        /iPhone/i,
+        /iPad/i,
+        /iPod/i,
+        /BlackBerry/i,
+        /Windows Phone/i
+    ];
+    return toMatch.some((toMatchItem) => {
+        return navigator.userAgent.match(toMatchItem);
+    });
+}
+ async function changePlace(oldClass, newClass, anime){
     let element = document.getElementsByClassName(oldClass)[0]
     element.style.animation=`${anime} 1000ms`
     setTimeout(() => {
         element.classList.remove(oldClass)
         element.classList.add(newClass)
     }, 1000)
-
 }
 
-let currentImg = 0
-
-
-//document.getElementById("change").onclick = rightSwipe
-
 async function rightSwipe(){
-    //document.getElementById("change").onclick = function (){}
     let indicators = document.getElementsByClassName("circle")
     indicators[currentImg].classList.remove("current")
     currentImg === 4 ? currentImg = 0 : currentImg++
@@ -31,18 +37,41 @@ async function rightSwipe(){
     await changePlace("last", "first", "last-to-first")
 }
 
-
-
 let langDrop = document.getElementById("langage__drop")
 let langList = document.getElementById("langage__list")
+let currentImg = 0
+let dropped = false
 
 
-
-langDrop.onmouseover = ()=>{
-    langList.style.height = "180px"
+if(!detectMob()){
+    langDrop.onmouseover = langList.onmouseover = ()=>{
+        langList.style.height = "180px"
+    }
+    langList.onmouseleave = langDrop.onmouseleave = ()=>{
+        langList.style.height = "0"
+    }
 }
-langList.onmouseleave = ()=>{
-    langList.style.height = "0"
+
+
+
+if(detectMob()){
+    langDrop.onclick = ()=>{
+        if(dropped){
+            dropped = false
+            langDrop.classList.remove("dropped")
+            langList.style.height = "0"
+        }
+        else{
+            dropped = true
+            langDrop.classList.add("dropped")
+            langList.style.height = "180px"
+        }
+    }
 }
+
+
+
+
+
 
 //setInterval(()=>rightSwipe(),3000)
