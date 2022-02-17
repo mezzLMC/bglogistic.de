@@ -192,7 +192,7 @@ body{
 }
 #contact-bar{
   justify-content: space-between;
-  display: flex;
+  display: none;
   flex-direction: row;
   width: 60%;
   position: absolute;
@@ -246,9 +246,8 @@ body{
 #hero-title2{
   margin-top: 15px;
   font-weight: 500;
-  font-size: 40px;
-  line-height: 52px;
   letter-spacing: -0.105em;
+  font-size: 34px;
 }
 #center{
   margin: 30px auto auto;
@@ -401,6 +400,9 @@ label {
   font-size: 18px;
   resize: none;
 }
+h1 {
+  font-size: 43px;
+}
 
 #contact-submit{
   display: block;
@@ -409,9 +411,7 @@ label {
   border: none;
   height: 40px;
   width: 150px;
-  margin: auto;
-  margin-top: 20px;
-  margin-bottom: 50px;
+  margin: 20px auto 50px;
   color: white;
   font-family: Gotham;
   font-weight: bold;
@@ -494,9 +494,6 @@ label {
   #header{
     height: 60px;
   }
-  h1 {
-    font-size: 35px;
-  }
   #animation-title{
     font-size: 150px;
     width: 100%;
@@ -508,26 +505,6 @@ label {
   }
   #center{
     width: 90%;
-  }
-  #hero-title{
-    top: 8%;
-    width: auto;
-    left: 0;
-    right: 20px;
-    transform: none;
-  }
-  #hero-title1{
-    text-align: center;
-    padding-left: 10px;
-    padding-right: 10px;
-
-  }
-  #hero-title2{
-    font-size: 25px;
-    line-height: 32px;
-    text-align: center;
-    padding-left: 20px;
-    padding-right: 20px;
   }
   #services-question{
     font-size: 23px;
@@ -578,9 +555,7 @@ label {
     height: auto;
     width: 20%;
   }
-  #contact-bar{
-    display: none;
-  }
+
   #contact{
     max-width: 650px !important;
   }
@@ -638,10 +613,12 @@ label {
   .footer-info:nth-child(2){
     margin-left: 10px;
   }
-
 }
 
 @media only screen and (min-width: 768px) {
+  h1{
+    font-size: 45px;
+  }
   #contact{
     max-width: 650px;
   }
@@ -650,6 +627,9 @@ label {
   }
   .category::after{
     width: 250px;
+  }
+  .contacts{
+    font-size: 21px;
   }
   #services{
     max-width: 700px;
@@ -667,16 +647,75 @@ label {
   #animation-loader{
     font-size: 190px;
   }
+  #hero-title1{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 15px;
+  }
+  #hero-title2{
+    line-height: 38px;
+    font-size: 34px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 40px;
+    margin-top: 0;
+  }
+  #hero-numbers-phone{
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 1224px){
+  #hero__container{
+    flex-direction: column !important;
+  }
+  #hero-title{
+    width: 80%;
+    right: 20px;
+    transform: none;
+    margin: 20px auto auto;
+  }
+  #hero-title1{
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #hero-title2{
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #hero-title2{
+    margin-bottom: 0;
+  }
+  #hero-numbers-phone{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 28px;
+    font-weight: 500;
+  }
+  #hero-numbers-phone a{
+    color: white;
+    text-decoration: none;
+  }
 }
 
 @media only screen and (min-width: 992px) {
+  #contact-bar{
+    display: flex !important;
+  }
   .h1, h1 {
     font-size: 42px;
   }
   #hero{
-    height: 350px;
-    margin-top: 0px;
-
+    height: 650px;
+    margin-top: 60px;
   }
   #hero__container{
     position: absolute;
@@ -719,8 +758,14 @@ label {
   #hero{
     height: 597px;
   }
+  #hero__container{
+    width: 100%;
+    max-width: 1500px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
   #carousel__container{
-    margin-left: 0px;
+    width: 50%;
   }
   .contacts{
     font-size: 23px;
