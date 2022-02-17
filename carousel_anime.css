@@ -63,3 +63,71 @@
         left: 0;
     }
 }
+
+@media only screen and (max-width: 600px) {
+    @keyframes after-to-last {
+        from{
+            z-index: 100;
+            width: 300px;
+            left: 60px;
+            height: 200px;
+        }
+        to{
+            z-index: 0;
+            left: 145px;
+            width: 225px;
+            height: 150px;
+        }
+    }
+    @keyframes first-to-before {
+        from{
+            left: 0;
+            z-index: 0;
+            height: 150px;
+            width: 225px;
+        }
+        to{
+            left: 5px;
+            z-index: 100;
+            height: 200px;
+            width: 300px;
+        }
+    }
+    
+    @keyframes before-to-active {
+        from{
+            z-index: 100;
+            left: 5px;
+            height: 200px;
+            width: 300px;
+        }
+        to{
+            z-index: 200;
+            left: 15px;
+            height: 220px;
+            width: 330px;
+        }
+    }
+    @keyframes active-to-after {
+        from{
+            z-index: 200;
+            left: 15px;
+            height: 220px;
+            width: 330px;
+        }
+        to {
+            z-index: 100;
+            width: 300px;
+            left: 60px;
+            height: 200px;
+        }
+    }
+    @keyframes last-to-first {
+        from{
+            left: 145px;
+        }
+        to{
+            left: 0;
+        }
+    }
+}

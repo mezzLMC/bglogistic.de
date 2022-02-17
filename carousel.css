@@ -82,29 +82,28 @@
     #carousel{
         width: 370px;
     }
-    .first{
-        left: 0;
-    }
-    .before{
-        left: 5px;
-    }
     .active{
         width: 330px;
         height: 220px;
         left: 15px;
         z-index: 200;
     }
+    .before{
+        left: 5px;
+    }
     .after{
         left: 60px;
-    }
-    .last{
-        left: 145px;
     }
     .before, .after{
         height: 200px;
         width: 300px;
         z-index: 100;
-
+    }
+    .first{
+        left: 0;
+    }
+    .last{
+        left: 145px;
     }
     .first, .last{
         height: 150px;

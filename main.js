@@ -26,7 +26,6 @@ function detectMob() {
 }
 
 async function rightSwipe(){
-    let indicators = document.getElementsByClassName("circle")
     indicators[currentImg].classList.remove("current")
     currentImg === 4 ? currentImg = 0 : currentImg++
     indicators[currentImg].classList.add("current")
@@ -37,6 +36,18 @@ async function rightSwipe(){
     await changePlace("last", "first", "last-to-first")
 }
 
+async function leftSwipe(){
+    indicators[currentImg].classList.remove("current")
+    currentImg === 4 ? currentImg = 0 : currentImg++
+    indicators[currentImg].classList.add("current")
+    await changePlace("first", "before", "first-to-before")
+    await changePlace("active","after", "active-to-after")
+    await changePlace("before","active", "before-to-active")
+    await changePlace("after", "last", "after-to-last")
+    await changePlace("last", "first", "last-to-first")
+}
+
+let indicators = document.getElementsByClassName("circle")
 let langDrop = document.getElementById("langage__drop")
 let langList = document.getElementById("langage__list")
 let currentImg = 0
@@ -52,7 +63,16 @@ if(!detectMob()){
     }
 }
 
+let carouselMove = setInterval(()=>rightSwipe(),2500)
 
+document.getElementById("arrow__right").onclick = ()=>{
+    clearTimeout(carouselMove)
+    rightSwipe()
+}
+document.getElementById("arrow__left").onclick = ()=>{
+    clearTimeout(carouselMove)
+    leftSwipe()
+}
 
 if(detectMob()){
     langDrop.onclick = ()=>{
@@ -72,6 +92,3 @@ if(detectMob()){
 
 
 
-
-
-//setInterval(()=>rightSwipe(),3000)
